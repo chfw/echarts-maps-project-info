@@ -10,7 +10,7 @@
 {% if item is mapping %}
 {% for key, value_list in item.items() %}
 {% for line in key | github_expand(name, organisation) | split_length(77) %}
-{{loop.index + '. ' if loop.first else '...'}}{{line}}
+{{loop.index|string + '. ' if loop.first else '...'}}{{line}}
 {% endfor %}
 
 {% for list_item in value_list %}
@@ -20,7 +20,7 @@
 {% endfor %}
 {% else %}
 {% for line in item | github_expand(name, organisation) | split_length(77) %}
-{{loop.index + '.' if loop.first else '...'}}{{line}}
+{{loop.index|string + '.' if loop.first else '...'}}{{line}}
 {% endfor %}
 {% endif %}
 {% endfor %}
