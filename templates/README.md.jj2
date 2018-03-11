@@ -1,0 +1,19 @@
+# {{name}}
+
+{% block introduction %}
+{% endblock %}
+
+{% block features %}
+{% endblock %}
+
+## 安装 - Installation
+
+```
+npm install {{name}}
+```
+
+{% block license %}
+{% endblock %}
+
+{% block others %}
+{% endblock %}
